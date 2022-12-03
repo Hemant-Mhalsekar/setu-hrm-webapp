@@ -36,12 +36,12 @@ export default function header() {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item text-center" href="#">
+                    <a className="dropdown-item" href="#">
                       View Profile
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item text-center" href="#">
+                    <a className="dropdown-item" href="#">
                       Company Profile
                     </a>
                   </li>

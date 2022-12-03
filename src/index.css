@@ -19,6 +19,7 @@ code {
 
 .dropdown,
 .dropdown-menu {
+  text-align: center;
   background-color: #a4c0f9;
   border-radius: 15px;
   width: 200px;
