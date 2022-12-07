@@ -1,0 +1,34 @@
+Tables for TY Project
+
+//orgReg_tbl---> organisation registration table 
+
+CREATE TABLE orgReg_tbl(
+orgReg_id VARCHAR(50) NOT NULL PRIMARY KEY,
+orgReg_name VARCHAR(100) NOT NULL,
+orgReg_address VARCHAR(500) NOT NULL,
+orgReg_email VARCHAR(100) NOT NULL,
+orgReg_regDate TIMESTAMP NOT NULL,
+orgReg_pan VARCHAR(10) NOT NULL,
+orgReg_contact VARCHAR(15) NOT NULL,
+orgReg_gstin VARCHAR(25) NOT NULL,
+orgReg_cni VARCHAR(25) NOT NULL,
+orgReg_activeyn VARCHAR(1) NOT NULL,
+orgReg_delReason VARCHAR(500) NOT NULL,
+system_date TIMESTAMP NOT NULL,
+system_user VARCHAR(50) NOT NULL,
+system_host VARCHAR(50) NOT NULL
+);
+
+//otp_tbl---> OTP table
+
+CREATE TABLE otp_tbl(
+otp_no INT NOT NULL,
+otp_srno INT NOT NULL PRIMARY KEY,
+otp_genDateTime TIMESTAMP NOT NULL,
+otp_usedTime TIMESTAMP NOT NULL,
+otp_Active VARCHAR(1) NOT NULL,
+otp_latestyn VARCHAR(1) NOT NULL,
+system_date TIMESTAMP NOT NULL,
+system_user VARCHAR(50) NOT NULL,
+system_host VARCHAR(50) NOT NULL
+);
