@@ -1,0 +1,99 @@
+Tables for TY Project
+Currently without foreign key constraints
+Table refining is needed
+
+//orgReg_tbl---> organisation registration table 
+
+CREATE TABLE orgReg_tbl(
+orgReg_id VARCHAR(50) NOT NULL PRIMARY KEY,
+orgReg_name VARCHAR(100) NOT NULL,
+orgReg_address VARCHAR(500) NOT NULL,
+orgReg_email VARCHAR(100) NOT NULL,
+orgReg_regDate TIMESTAMP NOT NULL,
+orgReg_pan VARCHAR(10) NOT NULL,
+orgReg_contact VARCHAR(15) NOT NULL,
+orgReg_gstin VARCHAR(25) NOT NULL,
+orgReg_cni VARCHAR(25) NOT NULL,
+orgReg_activeyn VARCHAR(1) NOT NULL,
+orgReg_delReason VARCHAR(500) NOT NULL,
+system_date TIMESTAMP NOT NULL,
+system_user VARCHAR(50) NOT NULL,
+system_host VARCHAR(50) NOT NULL
+);
+
+//otp_tbl---> OTP table
+
+CREATE TABLE otp_tbl(
+otp_no INT NOT NULL,
+otp_srno INT NOT NULL PRIMARY KEY,
+otp_genDateTime TIMESTAMP NOT NULL,
+otp_usedTime TIMESTAMP NOT NULL,
+otp_Active VARCHAR(1) NOT NULL,
+otp_latestyn VARCHAR(1) NOT NULL,
+system_date TIMESTAMP NOT NULL,
+system_user VARCHAR(50) NOT NULL,
+system_host VARCHAR(50) NOT NULL
+);
+
+
+//orgUnitDtl_tbl---> Organisation unit details 
+orgReg_id as foreign key for orgUnitDtl_srno
+
+CREATE TABLE otp_tbl(
+orgUnitDtl_srno INT PRIMARY KEY NOT NULL,
+orgUnitDtl_name VARCHAR(100) NOT NULL ,
+orgUnitDtl_address VARCHAR(500) NOT NULL,
+orgUnitDtl_activeyn VARCHAR(1) NOT NULL,
+orgUnitDtl_delReason VARCHAR(500) NOT NULL,
+system_date TIMESTAMP NOT NULL,
+system_user VARCHAR(50) NOT NULL,
+system_host VARCHAR(50) NOT NULL
+);
+
+
+//empReg_tbl---> Employee registration table
+
+CREATE TABLE empReg_tbl(
+empReg_id INT PRIMARY KEY NOT NULL,
+empReg_fName VARCHAR(50) NOT NULL ,
+empReg_mName VARCHAR(50) NOT NULL,
+empReg_lName VARCHAR(50) NOT NULL,
+empReg_gender VARCHAR(1) NOT NULL,
+empReg_dob DATE NOT NULL,
+empReg_age INT NOT NULL,
+empReg_marital_status VARCHAR(1) NOT NULL,
+empReg_nationality VARCHAR(25) NOT NULL,
+empReg_disability VARCHAR(1) NOT NULL,
+empReg_email VARCHAR(30) NOT NULL,
+empReg_mobile INT NOT NULL,
+empReg_designation VARCHAR(25) NOT NULL,
+empReg_uan INT NOT NULL,
+empReg_esic INT NOT NULL,
+empReg_pan VARCHAR(25) NOT NULL,
+empReg_aadhar INT NOT NULL,
+empReg_city VARCHAR(50) NOT NULL,
+empReg_state VARCHAR(50) NOT NULL,
+empReg_pincode INT NOT NULL,
+empReg_landmark VARCHAR(100) NOT NULL,
+empReg_activeyn VARCHAR(1) NOT NULL,
+empReg_delReason VARCHAR(500) NOT NULL,
+system_date TIMESTAMP NOT NULL,
+system_user VARCHAR(50) NOT NULL,
+system_host VARCHAR(50) NOT NULL
+);
+
+//empSalaryDtl_tbl---> Employee Salary details
+CREATE TABLE empSalaryDtl_tbl(
+empSalaryDtl_id INT PRIMARY KEY NOT NULL,
+empSalaryDtl_basic NUMERIC(16, 1) NOT NULL ,
+empSalaryDtl_hra NUMERIC(16, 1) NOT NULL,
+empSalaryDtl_internet_allowance NUMERIC(16, 1) NOT NULL,
+empSalaryDtl_conveyance_allowance NUMERIC(16, 1) NOT NULL,
+empSalaryDtl_pf NUMERIC(16, 1) NOT NULL,
+empSalaryDtl_total NUMERIC(16, 1) NOT NULL,
+empSalaryDtl_activeyn VARCHAR(1) NOT NULL,
+empSalaryDtl_delReason VARCHAR(500) NOT NULL,
+system_date TIMESTAMP NOT NULL,
+system_user VARCHAR(50) NOT NULL,
+system_host VARCHAR(50) NOT NULL
+);
